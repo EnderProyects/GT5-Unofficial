@@ -171,6 +171,13 @@ public class MaterialsIDMap extends Int2ObjectOpenHashMap<Materials> {
         r(190, Materials.Churitsu);
         r(191, Materials.PoisonousSlurry);
         r(192, Materials.Amalgatite);
+        r(193, Materials.EnderAir);
+        r(194, Materials.EnderAirUnstable);
+        r(195, Materials.EnderAirCryostable);
+        r(196, Materials.EnderAirBalanced);
+        r(197, Materials.EnderAirFortified);
+        r(198, Materials.EnderAirPyrostable);
+        r(199, Materials.TranslokiteEncased);
         r(201, Materials.Manasteel);
         r(202, Materials.Terrasteel);
         r(203, Materials.ElvenElementium);
@@ -180,6 +187,11 @@ public class MaterialsIDMap extends Int2ObjectOpenHashMap<Materials> {
         r(207, Materials.Dreamwood);
         r(208, Materials.ManaDiamond);
         r(209, Materials.Dragonstone);
+        r(210, Materials.TranslokiteUnstableVolatile);
+        r(211, Materials.TranslokiteUnstableUnbalanced);
+        r(212, Materials.TranslokiteUnstableSemifluid);
+        r(213, Materials.TranslokiteUnstableHypercritical);
+        r(214, Materials.TranslokiteUnstableAmalgam);
         r(232, Materials.DenseSteam);
         r(233, Materials.DenseSuperheatedSteam);
         r(234, Materials.DenseSupercriticalSteam);

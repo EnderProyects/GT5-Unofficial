@@ -45,6 +45,9 @@ public class MTEHatchAirIntake extends MTEHatchFluidGenerator {
         if (id == DimensionEverglades.DIMID) {
             return Materials.ToxicAir.mGas;
         }
+        if (id == 1) {
+            return Materials.EnderAir.mFluid;
+        }
         if (id == -1) {
             return Materials.NetherAir.mFluid;
         } else {

@@ -955,6 +955,24 @@ public class Materials implements IColorModulationContainer, IOreMaterial {
     public static Materials PrismaticNaquadahCompositeSlurry;
     // endregion
 
+    // region Ender Line
+    public static Materials EnderAir;
+    public static Materials EnderAirUnstable;
+    // Stable Ender Air
+    public static Materials EnderAirCryostable;
+    public static Materials EnderAirBalanced;
+    public static Materials EnderAirFortified;
+    public static Materials EnderAirPyrostable;
+    // Translokite Unstable to Stable
+    public static Materials TranslokiteUnstableVolatile;
+    public static Materials TranslokiteUnstableUnbalanced;
+    public static Materials TranslokiteUnstableSemifluid;
+    public static Materials TranslokiteUnstableHypercritical;
+    public static Materials TranslokiteUnstableAmalgam;
+    // Final line material
+    public static Materials TranslokiteEncased;
+    // endregion
+
     // region Francium Line
     public static Materials ImpureFranciumSolution;
     public static Materials FranciumHydroxide;

@@ -57,6 +57,7 @@ public class MaterialsInit {
         loadRadoxLine();
         loadNetheriteLine();
         loadPrismaticAcidLine();
+        loadEnderAirLine();
         loadAcidRecipes();
         loadMagicMaterials();
         loadBotaniaMaterials();
@@ -14331,6 +14332,161 @@ public class MaterialsInit {
             .addFluid()
             .addSubTag(SubTag.TRANSPARENT)
             .constructMaterial();
+    }
+
+    private static void loadEnderAirLine() {
+        Materials.EnderAir = loadEnderAir();
+        Materials.EnderAirUnstable = loadEnderAirUnstable();
+        Materials.EnderAirCryostable = loadEnderAirCryostable();
+        Materials.EnderAirBalanced = loadEnderAirBalanced();
+        Materials.EnderAirFortified = loadEnderAirFortified();
+        Materials.EnderAirPyrostable = loadEnderAirPyrostable();
+        Materials.TranslokiteUnstableVolatile = loadTranslokiteUnstableVolatile();
+        Materials.TranslokiteUnstableUnbalanced = loadTranslokiteUnstableUnbalanced();
+        Materials.TranslokiteUnstableSemifluid = loadTranslokiteUnstableSemifluid();
+        Materials.TranslokiteUnstableHypercritical = loadTranslokiteUnstableHypercritical();
+        Materials.TranslokiteUnstableAmalgam = loadTranslokiteUnstableAmalgam();
+        Materials.TranslokiteEncased = loadTranslokiteEncased();
+
+    }
+
+    private static Materials loadEnderAir() {
+        return new MaterialBuilder().setName("EnderAir")
+            .setDefaultLocalName("Ender Air")
+            .setIconSet(TextureSet.SET_FLUID)
+            .setARGB(0x00197545)
+            .addCell()
+            .addFluid()
+            .constructMaterial();
+    }
+
+    public static Materials loadEnderAirUnstable() {
+        return new MaterialBuilder().setName("EnderAirUnstable")
+            .setDefaultLocalName("Unstable Ender Air")
+            .setIconSet(TextureSet.SET_FLUID)
+            .setARGB(0x00036916)
+            .addCell()
+            .addFluid()
+            .constructMaterial();
+    }
+
+    public static Materials loadEnderAirCryostable() {
+        return new MaterialBuilder().setName("EnderAirCryostable")
+            .setDefaultLocalName("Cryostable Ender Air")
+            .setIconSet(TextureSet.SET_FLUID)
+            .setARGB(0x005cedd3)
+            .addCell()
+            .addFluid()
+            .constructMaterial();
+    }
+
+    public static Materials loadEnderAirBalanced() {
+        return new MaterialBuilder().setName("EnderAirBalanced")
+            .setDefaultLocalName("Balanced Ender Air")
+            .setIconSet(TextureSet.SET_FLUID)
+            .setARGB(0x005fb509)
+            .addCell()
+            .addFluid()
+            .constructMaterial();
+    }
+
+    public static Materials loadEnderAirFortified() {
+        return new MaterialBuilder().setName("EnderAirFortified")
+            .setDefaultLocalName("Fortified Ender Air")
+            .setIconSet(TextureSet.SET_FLUID)
+            .setARGB(0x001c361a)
+            .addCell()
+            .addFluid()
+            .constructMaterial();
+    }
+
+    public static Materials loadEnderAirPyrostable() {
+        return new MaterialBuilder().setName("EnderAirPyrostable")
+            .setDefaultLocalName("Pyrostable Ender Air")
+            .setIconSet(TextureSet.SET_FLUID)
+            .setARGB(0x00e4f07d)
+            .addCell()
+            .addFluid()
+            .constructMaterial();
+    }
+
+    public static Materials loadTranslokiteUnstableVolatile() {
+        return new MaterialBuilder().setName("TranslokiteUnstableVolatile")
+            .setDefaultLocalName("Volatile Translokite")
+            .setIconSet(TextureSet.SET_FLUID)
+            .setARGB(0x00c47b74)
+            .addCell()
+            .addFluid()
+            .constructMaterial();
+    }
+
+    public static Materials loadTranslokiteUnstableUnbalanced() {
+        return new MaterialBuilder().setName("TranslokiteUnstableUnbalanced")
+            .setDefaultLocalName("Unbalanced Translokite")
+            .setIconSet(TextureSet.SET_FLUID)
+            .setARGB(0x00cca2f2)
+            .addCell()
+            .addFluid()
+            .constructMaterial();
+    }
+
+    public static Materials loadTranslokiteUnstableSemifluid() {
+        return new MaterialBuilder().setName("TranslokiteUnstableSemifluid")
+            .setDefaultLocalName("Semifluid Translokite")
+            .setIconSet(TextureSet.SET_FLUID)
+            .setARGB(0x000f1d4a)
+            .addCell()
+            .addFluid()
+            .constructMaterial();
+    }
+
+    public static Materials loadTranslokiteUnstableHypercritical() {
+        return new MaterialBuilder().setName("TranslokiteUnstableHypercritical")
+            .setDefaultLocalName("Hypercritical Translokite")
+            .setIconSet(TextureSet.SET_FLUID)
+            .setARGB(0x00400c0b)
+            .addCell()
+            .addFluid()
+            .constructMaterial();
+    }
+
+    public static Materials loadTranslokiteUnstableAmalgam() {
+        return new MaterialBuilder().setName("TranslokiteUnstableAmalgam")
+            .setDefaultLocalName("Unstable Amalgam")
+            .setIconSet(TextureSet.SET_FLUID)
+            .setARGB(0x0017064f)
+            .addCell()
+            .addFluid()
+            .constructMaterial();
+    }
+
+    public static Materials loadTranslokiteEncased() {
+        return new MaterialBuilder().setName("TranslokiteEncased")
+            .setDefaultLocalName("Encased Translokite")
+            .setIconSet(new TextureSet("Translokiteencased", true))
+            .setColor(Dyes.dyeLightGray)
+            .setARGB(0xffffffff)
+            .addMetalItems()
+            .addGearItems()
+            .setMeltingPoint(1_200)
+            .setBlastFurnaceTemp(1_900)
+            .setBlastFurnaceRequired(true)
+            .setAutoGenerateBlastFurnaceRecipes(false)
+            .setAutoGeneratedVacuumFreezerRecipe(false)
+            .setAutoGeneratedRecycleRecipes(false)
+            .addSubTag(SubTag.NO_RECIPES)
+            .addSubTag(SubTag.SMELTING_TO_FLUID)
+            .addSubTag(SubTag.TRANSPARENT)
+            .addSubTag(SubTag.NO_RECYCLING_RECIPES)
+            .addSubTag(SubTag.NO_RECYCLING)
+            .addSubTag(SubTag.NO_ORE_PROCESSING)
+            .removeOrePrefix(OrePrefixes.cellMolten)
+            .removeOrePrefix(OrePrefixes.nugget)
+            .removeOrePrefix(OrePrefixes.spring)
+            .removeOrePrefix(OrePrefixes.springSmall)
+            .constructMaterial()
+            .setProcessingMaterialTierEU(TierEU.RECIPE_UV);
+
     }
 
     private static void loadAcidRecipes() {
