@@ -5879,6 +5879,13 @@ gt.item.radiation_proof_composite_sheet.tooltip=Attenuates all forms of radiatio
 gt.item.naquarite_universal_insulator_foil.name=Naquarite Universal Insulator Foil
 gt.item.naquarite_universal_insulator_foil.tooltip=The Perfect Insulator!\nAbsorbs all heat, radiation and electricity.
 
+## Ender Air Line
+gt.item.resonant_stable_seed.name=Resonant Seed
+gt.item.resonant_stable_seed.tooltip=Everything condenses around you...
+gt.item.bubble_capsule_polymer_full.name=Unstable Translokite Bubble
+gt.item.bubble_capsule_polymer_full.tooltip=You can try to launch it... It wont work
+gt.item.bubble_capsule_polymer_empty.name=Bubble Capsule Polymer
+gt.item.bubble_capsule_polymer_empty.tooltip=There must be something to place in there
 ## Manafly
 gt.item.manafly.name=Manafly
 gt.item.manafly.tooltip=If you sift this, you're a monster

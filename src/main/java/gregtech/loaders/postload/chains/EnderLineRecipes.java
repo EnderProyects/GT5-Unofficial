@@ -1,6 +1,5 @@
 package gregtech.loaders.postload.chains;
 
-import static bartworks.API.recipe.BartWorksRecipeMaps.electricImplosionCompressorRecipes;
 import static goodgenerator.api.recipe.GoodGeneratorRecipeMaps.neutronActivatorRecipes;
 import static goodgenerator.util.MyRecipeAdder.computeRangeNKE;
 import static gregtech.api.enums.Mods.AdvancedSolarPanel;
@@ -243,7 +242,7 @@ public class EnderLineRecipes {
                     ItemList.Emitter_LV.get(2),
                     getModItem(AdvancedSolarPanel.ID, "asp_crafting_items", 2, 1),
                     getModItem(StevesCarts2.ID, "ModuleComponents", 2, 20))
-                .itemOutputs(ItemList.Bubble_Capsule_Polymer.get(16))
+                .itemOutputs(ItemList.Bubble_Capsule_Polymer_Empty.get(16))
                 .fluidInputs(
                     Materials.EnderAirPyrostable.getFluid(144L * 8),
                     Materials.EnderAirCryostable.getFluid(144L * 8),
@@ -338,107 +337,97 @@ public class EnderLineRecipes {
 
         }
 
-        // L3 Translokite processing ( Move from EXXON chem to new multiblock when done)
+        // Translokite processing
         {
 
             // FORMATION
 
             GTValues.RA.stdBuilder()
+                .itemInputs(ItemList.Bubble_Capsule_Polymer_Empty.get(1))
                 .fluidInputs(
                     FluidRegistry.getFluidStack("endergoo", 3_000),
                     Materials.TranslokiteUnstableSemifluid.getFluid(10_000),
                     Materials.TranslokiteUnstableUnbalanced.getFluid(10_000),
                     Materials.TranslokiteUnstableVolatile.getFluid(10_000))
                 .fluidOutputs(
-                    Materials.TranslokiteSemistable.getFluid(3_000),
                     Materials.TranslokiteUnstableHypercritical.getFluid(1_000),
                     Materials.TranslokiteUnstableAmalgam.getFluid(1_296))
+                .itemOutputs(ItemList.Bubble_Capsule_Polymer_Full.get(1))
                 .duration(60 * SECONDS)
                 .eut(TierEU.RECIPE_ZPM)
                 .metadata(CHEMPLANT_CASING_TIER, 7)
                 .addTo(chemicalPlantRecipes);
 
             GTValues.RA.stdBuilder()
+                .itemInputs(ItemList.Bubble_Capsule_Polymer_Empty.get(1))
                 .fluidInputs(
                     FluidRegistry.getFluidStack("endergoo", 3_000),
                     Materials.TranslokiteUnstableHypercritical.getFluid(10_000),
                     Materials.TranslokiteUnstableUnbalanced.getFluid(10_000),
                     Materials.TranslokiteUnstableVolatile.getFluid(10_000))
                 .fluidOutputs(
-                    Materials.TranslokiteSemistable.getFluid(3_000),
                     Materials.TranslokiteUnstableSemifluid.getFluid(1_000),
                     Materials.TranslokiteUnstableAmalgam.getFluid(1_296))
+                .itemOutputs(ItemList.Bubble_Capsule_Polymer_Full.get(1))
                 .duration(60 * SECONDS)
                 .eut(TierEU.RECIPE_ZPM)
                 .metadata(CHEMPLANT_CASING_TIER, 7)
                 .addTo(chemicalPlantRecipes);
 
             GTValues.RA.stdBuilder()
+                .itemInputs(ItemList.Bubble_Capsule_Polymer_Empty.get(1))
                 .fluidInputs(
                     FluidRegistry.getFluidStack("endergoo", 3_000),
                     Materials.TranslokiteUnstableHypercritical.getFluid(10_000),
                     Materials.TranslokiteUnstableSemifluid.getFluid(10_000),
                     Materials.TranslokiteUnstableVolatile.getFluid(10_000))
                 .fluidOutputs(
-                    Materials.TranslokiteSemistable.getFluid(3_000),
                     Materials.TranslokiteUnstableUnbalanced.getFluid(1_000),
                     Materials.TranslokiteUnstableAmalgam.getFluid(1_296))
+                .itemOutputs(ItemList.Bubble_Capsule_Polymer_Full.get(1))
                 .duration(60 * SECONDS)
                 .eut(TierEU.RECIPE_ZPM)
                 .metadata(CHEMPLANT_CASING_TIER, 7)
                 .addTo(chemicalPlantRecipes);
 
             GTValues.RA.stdBuilder()
+                .itemInputs(ItemList.Bubble_Capsule_Polymer_Empty.get(1))
                 .fluidInputs(
                     FluidRegistry.getFluidStack("endergoo", 3_000),
                     Materials.TranslokiteUnstableHypercritical.getFluid(10_000),
                     Materials.TranslokiteUnstableSemifluid.getFluid(10_000),
                     Materials.TranslokiteUnstableUnbalanced.getFluid(10_000))
                 .fluidOutputs(
-                    Materials.TranslokiteSemistable.getFluid(3_000),
                     Materials.TranslokiteUnstableVolatile.getFluid(1_000),
                     Materials.TranslokiteUnstableAmalgam.getFluid(1_296))
+                .itemOutputs(ItemList.Bubble_Capsule_Polymer_Full.get(1))
                 .duration(60 * SECONDS)
                 .eut(TierEU.RECIPE_ZPM)
                 .metadata(CHEMPLANT_CASING_TIER, 7)
                 .addTo(chemicalPlantRecipes);
 
             // STABILIZATION
-
-            GTValues.RA.stdBuilder()
-                .itemInputs(
-                    getModItem(EtFuturumRequiem.ID, "chorus_fruit_popped", 8, 0),
-                    ItemList.Resonant_Stable_Seed.get(1))
-                .fluidInputs(
-                    Materials.Grade4PurifiedWater.getFluid(4_000),
-                    Materials.TranslokiteSemistable.getFluid(10_000))
-                .fluidOutputs(Materials.TranslokiteStable.getFluid(7_500))
-                .itemOutputs(getModItem(HardcoreEnderExpansion.ID, "instability_orb", 1, 0))
-                .duration(20 * SECONDS)
-                .eut(TierEU.RECIPE_UV)
-                .metadata(CHEMPLANT_CASING_TIER, 7)
-                .addTo(chemicalPlantRecipes);
+            /*
+             * GTValues.RA.stdBuilder()
+             * .itemInputs(
+             * getModItem(EtFuturumRequiem.ID, "chorus_fruit_popped", 8, 0),
+             * ItemList.Resonant_Stable_Seed.get(1))
+             * .fluidInputs(
+             * Materials.Grade4PurifiedWater.getFluid(4_000),
+             * Materials.TranslokiteSemistable.getFluid(10_000))
+             * .fluidOutputs(Materials.TranslokiteStable.getFluid(7_500))
+             * .itemOutputs(getModItem(HardcoreEnderExpansion.ID, "instability_orb", 1, 0))
+             * .duration(20 * SECONDS)
+             * .eut(TierEU.RECIPE_UV)
+             * .metadata(CHEMPLANT_CASING_TIER, 7)
+             * .addTo(chemicalPlantRecipes);
+             */
         }
 
         EnderLineRecipes.addEncasedTranslokiteParts();
     }
 
     private static void addEncasedTranslokiteParts() {
-        addEncasedTranslokitePartsRecipe(OrePrefixes.ingot, 1, 1);
-        addEncasedTranslokitePartsRecipe(OrePrefixes.plate, 1, 1);
-        addEncasedTranslokitePartsRecipe(OrePrefixes.plateDouble, 1, 2);
-        addEncasedTranslokitePartsRecipe(OrePrefixes.plateDense, 1, 9);
-        addEncasedTranslokitePartsRecipe(OrePrefixes.stick, 2, 1);
-        addEncasedTranslokitePartsRecipe(OrePrefixes.round, 9, 1);
-        addEncasedTranslokitePartsRecipe(OrePrefixes.bolt, 8, 1);
-        addEncasedTranslokitePartsRecipe(OrePrefixes.screw, 8, 1);
-        addEncasedTranslokitePartsRecipe(OrePrefixes.ring, 4, 1);
-        addEncasedTranslokitePartsRecipe(OrePrefixes.foil, 4, 1);
-        addEncasedTranslokitePartsRecipe(OrePrefixes.itemCasing, 2, 1);
-        addEncasedTranslokitePartsRecipe(OrePrefixes.gearGtSmall, 1, 1);
-        addEncasedTranslokitePartsRecipe(OrePrefixes.rotor, 1, 5);
-        addEncasedTranslokitePartsRecipe(OrePrefixes.stickLong, 1, 1);
-        addEncasedTranslokitePartsRecipe(OrePrefixes.gearGt, 1, 4);
 
         // Encased Translokite custom parts
 
@@ -460,40 +449,8 @@ public class EnderLineRecipes {
             .duration(3 * SECONDS + 4 * TICKS)
             .eut(TierEU.RECIPE_ZPM)
             .addTo(assemblerRecipes);
-    }
 
-    private static void addEncasedTranslokitePartsRecipe(OrePrefixes prefix, int multiplier, int inverseMultiplier) {
-
-        // Space Assembler
-
-        GTValues.RA.stdBuilder()
-            .itemInputs(
-                GTOreDictUnificator.get(prefix, Materials.Enderium, multiplier),
-                ItemList.Bubble_Capsule_Polymer.get(1),
-                getModItem(AdvancedSolarPanel.ID, "asp_crafting_items", 2, 1),
-                GTModHandler.getModItem(NewHorizonsCoreMod.ID, "item.HeavyDutyPlateTier5", 1))
-            .itemOutputs(GTOreDictUnificator.get(prefix, Materials.TranslokiteEncased, multiplier))
-            .fluidInputs(Materials.TranslokiteStable.getFluid(288L * inverseMultiplier))
-            .metadata(IGRecipeMaps.MODULE_TIER, 1)
-            .duration(10 * SECONDS)
-            .eut(TierEU.RECIPE_UV)
-            .addTo(IGRecipeMaps.spaceAssemblerRecipes);
-
-        // Electric compressor
-
-        GTValues.RA.stdBuilder()
-            .itemInputs(
-                GTOreDictUnificator.get(prefix, Materials.Netherite, multiplier),
-                GTModHandler.getModItem(NewHorizonsCoreMod.ID, "item.HeavyDutyPlateTier7", 1),
-                getModItem(AdvancedSolarPanel.ID, "asp_crafting_items", 2, 4),
-                getModItem(AppliedEnergistics2.ID, "item.ItemMultiMaterial", 4L * inverseMultiplier, 6, missing))
-            .itemOutputs(GTOreDictUnificator.get(prefix, Materials.TranslokiteEncased, multiplier))
-            .fluidInputs(Materials.TranslokiteStable.getFluid(288L * inverseMultiplier))
-            .fluidOutputs(Materials.EnderAir.getFluid(14L * inverseMultiplier))
-            .metadata(IGRecipeMaps.MODULE_TIER, 1)
-            .duration(10 * SECONDS)
-            .eut(TierEU.RECIPE_UEV)
-            .addTo(electricImplosionCompressorRecipes);
+        // QFT Normal parts
 
     }
 

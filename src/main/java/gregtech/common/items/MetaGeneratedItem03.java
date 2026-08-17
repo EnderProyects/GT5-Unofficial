@@ -31,6 +31,8 @@ import static gregtech.common.items.IDMetaItem03.Armor_Chip_T2;
 import static gregtech.common.items.IDMetaItem03.Armor_Chip_T3;
 import static gregtech.common.items.IDMetaItem03.Beryllium_Shielding_Plate;
 import static gregtech.common.items.IDMetaItem03.Brittle_Netherite_Scrap;
+import static gregtech.common.items.IDMetaItem03.Bubble_Capsule_Polymer_Empty;
+import static gregtech.common.items.IDMetaItem03.Bubble_Capsule_Polymer_Full;
 import static gregtech.common.items.IDMetaItem03.Circuit_AdvancedIntegrated;
 import static gregtech.common.items.IDMetaItem03.Circuit_BasicElectronic;
 import static gregtech.common.items.IDMetaItem03.Circuit_Biomainframe;
@@ -281,6 +283,7 @@ import static gregtech.common.items.IDMetaItem03.Quark_Creation_Catalyst_Unalign
 import static gregtech.common.items.IDMetaItem03.Quark_Creation_Catalyst_Up;
 import static gregtech.common.items.IDMetaItem03.Radiation_Proof_Prismatic_Naquadah_Composite_Sheet;
 import static gregtech.common.items.IDMetaItem03.Relativistic_Heat_Capacitor;
+import static gregtech.common.items.IDMetaItem03.Resonant_Stable_Seed;
 import static gregtech.common.items.IDMetaItem03.Spinneret;
 import static gregtech.common.items.IDMetaItem03.StableBaryonContainmentUnit;
 import static gregtech.common.items.IDMetaItem03.StableBosonContainmentUnit;
@@ -1820,6 +1823,22 @@ public class MetaGeneratedItem03 extends MetaGeneratedItemX32 implements IItemFi
                 Naquarite_Universal_Insulator_Foil.ID,
                 "gt.item.naquarite_universal_insulator_foil.name",
                 "gt.item.naquarite_universal_insulator_foil.tooltip"));
+
+        ItemList.Resonant_Stable_Seed.set(
+            addItemWithLocalizationKeys(
+                Resonant_Stable_Seed.ID,
+                "gt.item.resonant_stable_seed.name",
+                "gt.item.resonant_stable_seed.tooltip"));
+        ItemList.Bubble_Capsule_Polymer_Full.set(
+            addItemWithLocalizationKeys(
+                Bubble_Capsule_Polymer_Full.ID,
+                "gt.item.bubble_capsule_polymer_full.name",
+                "gt.item.bubble_capsule_polymer_full.tooltip"));
+        ItemList.Bubble_Capsule_Polymer_Empty.set(
+            addItemWithLocalizationKeys(
+                Bubble_Capsule_Polymer_Empty.ID,
+                "gt.item.bubble_capsule_polymer_empty.name",
+                "gt.item.bubble_capsule_polymer_empty.tooltip"));
 
         ItemList.ManaFly.set(
             addItemWithLocalizationKeys(
